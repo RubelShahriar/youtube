@@ -58,8 +58,8 @@ const ChannelCard = ({ channelDetail, marginTop }) => {
             alt={channelDetail?.snippet?.title}
             sx={{
               borderRadius: "50%",
-              height: "60px",
-              width: "60px",
+              height: { xs: "60px", md: "100px" },
+              width: { xs: "60px", md: "100px" },
               // margin: "0 auto",
               border: "1px solid #e3e3e3",
             }}

@@ -7,6 +7,9 @@ import { fetchFromAPI } from "../utils/fetchFromAPI";
 const Feed = () => {
   const [selectedCategory, setSelectedCategory] = useState("New");
   const [videos, setVideos] = useState([]);
+
+  const date = new Date();
+
   useEffect(() => {
     fetchFromAPI(`search?part=snippet&q=${selectedCategory}`).then((data) => {
       setVideos(data.items);
@@ -17,7 +20,7 @@ const Feed = () => {
     <Stack sx={{ flexDirection: { xs: "column", md: "row" } }}>
       <Box
         sx={{
-          height: { sx: "auto", md: "96vh" },
+          height: { sx: "auto", md: "98vh" },
           // borderRight: "1px solid #3d3d3d",
           width: {
             xs: "100vw",
@@ -32,13 +35,21 @@ const Feed = () => {
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
         />
-        <Typography
-          className="copyright"
-          variant="body2"
-          sx={{ mt: 1.5, color: "#000" }}
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
         >
-          Copyright 2022 RS
-        </Typography>
+          <Typography
+            className="copyright"
+            variant="body2"
+            sx={{ mx: "auto", mt: 1.9, color: "#000" }}
+          >
+            {`Copyright @${date.getFullYear()} Rubel`}
+          </Typography>
+        </Box>
       </Box>
 
       <Box
