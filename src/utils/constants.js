@@ -12,14 +12,15 @@ import TheaterComedyIcon from "@mui/icons-material/TheaterComedy";
 import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
+import { SmartDisplayOutlined, TuneOutlined } from "@mui/icons-material";
 
 export const logo = "https://i.ibb.co/s9Qys2j/logo.png";
 
 export const categories = [
   // { name: "New", icon: <HomeIcon /> },
   { name: "Explore", icon: <ExploreOutlinedIcon /> },
-  { name: "All" },
-  { name: "Mixes" },
+  { name: "All", icon: <SmartDisplayOutlined /> },
+  { name: "Mixes", icon: <TuneOutlined /> },
   { name: "Music", icon: <MusicNoteIcon /> },
   { name: "Live", icon: <LiveTvIcon /> },
   { name: "Podcast", icon: <GraphicEqIcon /> },

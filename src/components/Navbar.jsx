@@ -22,7 +22,6 @@ const Navbar = () => {
     <Stack
       direction="row"
       alignItems="center"
-      px={1}
       sx={{
         // position: "relative",
         background: "#fff",
@@ -30,6 +29,7 @@ const Navbar = () => {
         justifyContent: "space-between",
         zIndex: 999,
         boxShadow: { xs: 2, sm: 2, md: "none", lg: "none", xl: "none" },
+        px: { xs: 1, md: 2 },
       }}
       style={{
         top: `${hideNav ? "-60px" : "0"}`,

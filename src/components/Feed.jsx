@@ -19,15 +19,13 @@ const Feed = () => {
         sx={{
           height: { sx: "auto", md: "96vh" },
           // borderRight: "1px solid #3d3d3d",
-          px: { xs: "0", sm: "0", md: "1", lg: "2" },
           width: {
-            xs: "96vw",
+            xs: "100vw",
             sm: "100vw",
             md: "15vw",
             lg: "15vw",
             xl: "15vw",
           },
-          m: "0 auto",
         }}
       >
         <Sidebar
@@ -44,7 +42,6 @@ const Feed = () => {
       </Box>
 
       <Box
-        className="videoswrapper"
         sx={{
           overflowY: "auto",
           height: { xs: "auto", sm: "96vh" },

@@ -48,20 +48,15 @@ const VideoDetails = () => {
       </div>
     );
 
-  // const {
-  //   snippet: { title, channelId, channelTitle },
-  //   statistics: { viewCount, likeCount },
-  // } = videoDetail;
-
   return (
-    <Box minHeight="95vh">
-      <Stack direction={{ xs: "column", md: "row" }}>
+    <Box minHeight="95vh" sx={{ px: { xs: 0, md: 2 } }}>
+      <Stack direction={{ xs: "column", md: "row" }} gap={2}>
         <Box flex={1}>
           <Box
             sx={{
               width: "100%",
               position: "sticky",
-              top: "86px",
+              top: "0",
             }}
           >
             <ReactPlayer
@@ -123,11 +118,11 @@ const VideoDetails = () => {
         </Box>
         <Box
           px={0}
-          py={{ md: 1, xs: 5 }}
+          py={{ md: 1, xs: 0 }}
           justifyContent="center"
           alignItems="center"
         >
-          <Videos videos={videos} direction="column" />
+          <Videos videos={videos} direction="column" widthProp="200px" />
         </Box>
       </Stack>
     </Box>

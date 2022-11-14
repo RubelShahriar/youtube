@@ -58,13 +58,7 @@ const ChannelDetail = () => {
         </Box>
       </Box>
       {description ? (
-        <Box
-          display="flex"
-          width="100%"
-          justifyContent="center"
-          alignItems="center"
-          p="0"
-        >
+        <Box display="flex" justifyContent="center" alignItems="center" px={2}>
           {/* sm: means it applys only for sm and higher not for xs devices */}
           {/* <Box sx={{ mx: { sm: "0px" } }} /> */}
           <Videos videos={videos} />

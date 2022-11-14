@@ -15,14 +15,21 @@ const VideoCard = ({
     id: { videoId },
     snippet,
   },
+  widthProp,
 }) => {
   return (
     <Card
       sx={{
-        width: { xs: "100vw", sm: "100%", md: "100%", lg: "100%" },
+        width: {
+          xs: "100vw",
+          sm: "100%",
+          md: "100%",
+          lg: "100%",
+        },
         boxShadow: "none",
         borderRadius: 0,
         backgroundColor: "white",
+        display: { xs: "block", md: widthProp ? "flex" : "block" },
       }}
     >
       <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
@@ -33,19 +40,29 @@ const VideoCard = ({
             width: {
               xs: "100%",
               sm: "100%",
-              md: "100%",
-              lg: "100%",
+              md: widthProp || "100%",
+              lg: widthProp || "100%",
             },
-            height: { xs: 230, sm: 180, md: 140, lg: 160 },
+            height: {
+              xs: 230,
+              sm: 180,
+              md: widthProp ? 110 : 140,
+              lg: widthProp ? 110 : 160,
+            },
             borderRadius: { xs: "none", sm: "none", md: "5px", lg: "10px" },
           }}
         />
       </Link>
       <CardContent
         sx={{
+          width: { md: widthProp },
           height: "30px",
           display: "flex",
           justifyContent: "space-between",
+          mb: { xs: 2 },
+          p: { xs: 2 },
+          pl: { md: 1 },
+          pt: { md: widthProp && 0 },
         }}
       >
         <div>
