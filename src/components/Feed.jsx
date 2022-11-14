@@ -14,12 +14,20 @@ const Feed = () => {
   }, [selectedCategory]);
 
   return (
-    <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
+    <Stack sx={{ flexDirection: { xs: "column", md: "row" } }}>
       <Box
         sx={{
-          height: { sx: "auto", md: "92vh" },
-          borderRight: "1px solid #3d3d3d",
-          px: { sx: 0, md: 2 },
+          height: { sx: "auto", md: "96vh" },
+          // borderRight: "1px solid #3d3d3d",
+          px: { xs: "0", sm: "0", md: "1", lg: "2" },
+          width: {
+            xs: "96vw",
+            sm: "100vw",
+            md: "15vw",
+            lg: "15vw",
+            xl: "15vw",
+          },
+          m: "0 auto",
         }}
       >
         <Sidebar
@@ -29,22 +37,21 @@ const Feed = () => {
         <Typography
           className="copyright"
           variant="body2"
-          sx={{ mt: 1.5, color: "#fff" }}
+          sx={{ mt: 1.5, color: "#000" }}
         >
           Copyright 2022 RS
         </Typography>
       </Box>
 
-      <Box p={0} sx={{ overflowY: "auto", height: "90vh", flex: 2 }}>
-        {/* <Typography
-          variant="body1"
-          fontWeight="light"
-          mb={1}
-          sx={{ color: "black" }}
-        >
-          {selectedCategory}
-          <span style={{ color: "#f31503" }}> videos </span>
-        </Typography> */}
+      <Box
+        className="videoswrapper"
+        sx={{
+          overflowY: "auto",
+          height: { xs: "auto", sm: "96vh" },
+          width: { xs: "100vw", sm: "90vw", md: "85vw" },
+          p: { xs: 0, sm: 2 },
+        }}
+      >
         <Videos videos={videos} />
       </Box>
     </Stack>

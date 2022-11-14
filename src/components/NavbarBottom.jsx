@@ -21,17 +21,16 @@ const NavbarBottom = () => {
     <Box
       sx={{
         width: "100%",
-        height: "30px",
         backgroundColor: "white",
         position: "sticky",
         bottom: "0",
         left: "0",
-        display: "flex",
-        justifyContent: "space-around",
-        alignItems: "center",
-        py: 3,
+        py: 1,
         boxSizing: "border-box",
         borderTop: "1px solid #e5e5e5",
+        display: { xs: "flex", sm: "flex", md: "none", lg: "none" },
+        justifyContent: "space-around",
+        alignItems: "center",
       }}
     >
       <Link to="/">
