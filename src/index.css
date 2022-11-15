@@ -69,12 +69,18 @@ a {
 }
 
 @media screen and (max-width: 800px) {
+  .bnrImg {
+    height: 100px !important;
+  }
   .copyright {
     display: none !important;
   }
 }
 
 @media screen and (max-width: 600px) {
+  .bnrImg {
+    height: 70px !important;
+  }
   .category-btn {
     background-color: #e5e5e5;
   }

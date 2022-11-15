@@ -31,6 +31,7 @@ const ChannelDetail = () => {
           display: { xs: "none", md: "block" },
           width: { sx: "auto", md: "15vw" },
           height: { sx: "auto", md: "98vh" },
+          mr: 2,
         }}
       >
         <Sidebar />
@@ -43,22 +44,23 @@ const ChannelDetail = () => {
         }}
       >
         <Box sx={{ boxShadow: 2, mb: 2 }}>
-          <div sx={{ mb: 0, height: { xs: "70px ", md: "130px" } }}>
+          <div sx={{ mb: 0 }}>
             <img
+              className="bnrImg"
               src={
                 channelDetail?.id === "UCnvEyUM0WKO-kRKFGQZccjA"
                   ? demoBannerImage
                   : channelDetail?.brandingSettings?.image?.bannerExternalUrl
               }
-              alt="bannerimage"
+              alt="bannerimagenotfound"
               style={{
                 width: "100%",
-                height: "100%",
+                height: "170px",
                 objectFit: "cover",
               }}
             />
           </div>
-          <ChannelCard channelDetail={channelDetail} marginTop="-50px" />
+          <ChannelCard channelDetail={channelDetail} />
           <Box
             spacing={1}
             pb={2}

@@ -26,7 +26,6 @@ const SearchBar = () => {
         pl: 2,
         boxShadow: "none",
         mr: { sm: 5 },
-        // height: 30,
       }}
     >
       <input

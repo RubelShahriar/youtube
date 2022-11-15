@@ -16,79 +16,60 @@ function numFormatter(num) {
   }
 }
 
-const ChannelCard = ({ channelDetail, marginTop }) => {
-  // const { snippet } = channelDetail;
-
+const ChannelCard = ({ channelDetail }) => {
   return (
     <Box
       sx={{
-        boxShadow: "none",
-        borderRadius: "20px",
+        marginTop: "-50px",
         display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        width: { xs: "356px", md: "320px" },
-        height: "auto",
-        margin: "auto",
-        marginTop,
+        flexDirection: "column",
       }}
     >
-      {/* <Link to={`/channel/${channelDetail?.id?.channelId}`}> */}
-      <CardContent
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          textAlign: "center",
-          color: "#000",
-        }}
-      >
-        <Link
-          to={
-            channelDetail?.snippet?.channelId
-              ? `/channel/${channelDetail?.snippet?.channelId}`
-              : demoChannelUrl
+      <CardContent sx={{ textAlign: "center" }}>
+        <CardMedia
+          image={
+            channelDetail?.snippet?.thumbnails?.high?.url || demoProfilePicture
           }
-        >
-          <CardMedia
-            image={
-              channelDetail?.snippet?.thumbnails?.high?.url ||
-              demoProfilePicture
-            }
-            alt={channelDetail?.snippet?.title}
-            sx={{
-              borderRadius: "50%",
-              height: { xs: "60px", md: "100px" },
-              width: { xs: "60px", md: "100px" },
-              // margin: "0 auto",
-              border: "1px solid #e3e3e3",
-            }}
-          />
-          <Typography variant="h6">
-            {channelDetail?.snippet?.title}
-            <CheckCircle sx={{ fontSize: 12, color: "gray", ml: "5px" }} />
-          </Typography>
-        </Link>
+          alt={channelDetail?.snippet?.title}
+          sx={{
+            borderRadius: "50%",
+            height: { xs: "60px", md: "150px" },
+            width: { xs: "60px", md: "150px" },
+            ml: { xs: 6, md: 10 },
+            border: "1px solid #e3e3e3",
+            backgroundColor: "#ffee58",
+          }}
+        />
+        <Typography variant="h6">
+          {channelDetail?.snippet?.title}
+          <CheckCircle sx={{ fontSize: 12, color: "gray", ml: "5px" }} />
+        </Typography>
         {channelDetail?.statistics?.subscriberCount && (
-          <div style={{ display: "flex" }}>
-            <Typography variant="body2" sx={{ mr: 2 }}>
-              {numFormatter(
-                parseInt(channelDetail?.statistics?.subscriberCount)
-              )}{" "}
-              subscribers
-            </Typography>
-            <Typography variant="body2" sx={{ mr: 2 }}>
-              {numFormatter(parseInt(channelDetail?.statistics?.videoCount))}{" "}
-              videos
-            </Typography>
-            <Typography variant="body2" sx={{ mr: 2 }}>
-              {numFormatter(parseInt(channelDetail?.statistics?.viewCount))}{" "}
-              views
-            </Typography>
-          </div>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <Box sx={{ display: "flex" }}>
+              <Typography variant="body2" sx={{ mr: 2 }}>
+                {numFormatter(
+                  parseInt(channelDetail?.statistics?.subscriberCount)
+                )}{" "}
+                subscribers
+              </Typography>
+              <Typography variant="body2" sx={{ mr: 2 }}>
+                {numFormatter(parseInt(channelDetail?.statistics?.videoCount))}{" "}
+                videos
+              </Typography>
+              <Typography variant="body2" sx={{ mr: 2 }}>
+                {numFormatter(parseInt(channelDetail?.statistics?.viewCount))}{" "}
+                views
+              </Typography>
+            </Box>
+          </Box>
         )}
       </CardContent>
-      {/* </Link> */}
     </Box>
   );
 };
