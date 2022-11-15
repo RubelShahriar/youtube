@@ -7,6 +7,7 @@ import { CheckCircle } from "@mui/icons-material";
 import { Videos } from "./";
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 import { ThumbUpAlt, Visibility } from "@mui/icons-material";
+import loadingImg from "../assets/dark-loader.gif";
 
 function numFormatter(num) {
   if (num > 999 && num < 1000000) {
@@ -36,16 +37,16 @@ const VideoDetails = () => {
 
   if (!videos?.length)
     return (
-      <div
-        style={{
-          height: "82vh",
+      <Box
+        sx={{
+          height: "95vh",
           display: "flex",
-          alignItems: "center",
           justifyContent: "center",
+          alignItems: "center",
         }}
       >
-        <Typography variant="body1">Loading videos...</Typography>
-      </div>
+        <img style={{ width: "30px" }} src={loadingImg} alt="loadingImg" />
+      </Box>
     );
 
   return (

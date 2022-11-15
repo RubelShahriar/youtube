@@ -1,21 +1,23 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import { VideoCard, ChannelCard } from "./";
+import loadingImg from "../assets/dark-loader.gif";
 
 const Videos = ({ videos, direction, widthProp }) => {
   if (!videos?.length)
     return (
-      <div
-        style={{
-          height: "82vh",
+      <Box
+        sx={{
+          height: { xs: "80vh", md: "95vh" },
           display: "flex",
-          alignItems: "center",
           justifyContent: "center",
+          alignItems: "center",
         }}
       >
-        <Typography variant="body1">Loading videos...</Typography>
-      </div>
+        <img style={{ width: "30px" }} src={loadingImg} alt="loadingImg" />
+      </Box>
     );
+
   return (
     <Box
       sx={{
