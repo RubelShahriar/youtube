@@ -23,7 +23,6 @@ const Navbar = () => {
       direction="row"
       alignItems="center"
       sx={{
-        // position: "relative",
         background: "#fff",
         top: 0,
         justifyContent: "space-between",
@@ -34,7 +33,6 @@ const Navbar = () => {
       style={{
         top: `${hideNav ? "-60px" : "0"}`,
         position: `${hideNav ? "relative" : "sticky"}`,
-        // transition: `${hideNav && "4s"}`,
       }}
     >
       <Link to="/" style={{ display: "flex", alignItems: "center" }}>

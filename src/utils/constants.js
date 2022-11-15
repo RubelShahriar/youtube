@@ -17,7 +17,6 @@ import { SmartDisplayOutlined, TuneOutlined } from "@mui/icons-material";
 export const logo = "https://i.ibb.co/s9Qys2j/logo.png";
 
 export const categories = [
-  // { name: "New", icon: <HomeIcon /> },
   { name: "Explore", icon: <ExploreOutlinedIcon /> },
   { name: "All", icon: <SmartDisplayOutlined /> },
   { name: "Mixes", icon: <TuneOutlined /> },

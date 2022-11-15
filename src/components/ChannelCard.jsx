@@ -1,8 +1,7 @@
 import React from "react";
 import { CardContent, Box, CardMedia, Typography } from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
-import { demoProfilePicture, demoChannelUrl } from "../utils/constants";
-import { Link } from "react-router-dom";
+import { demoProfilePicture } from "../utils/constants";
 
 function numFormatter(num) {
   if (num > 999 && num < 1000000) {
