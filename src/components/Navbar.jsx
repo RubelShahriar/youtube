@@ -56,7 +56,9 @@ const Navbar = () => {
           display: { xs: "none", md: "flex" },
         }}
       >
-        <NotificationAddOutlined sx={{ fontSize: "26px", color: "gray" }} />
+        <NotificationAddOutlined
+          sx={{ fontSize: "26px", color: "gray", cursor: "pointer" }}
+        />
         <Typography
           variant="body1"
           sx={{
@@ -64,6 +66,8 @@ const Navbar = () => {
             flexDirection: "row",
             border: "1px solid #90a4ae",
             borderRadius: "40px",
+            cursor: "pointer",
+            transition: "0.3s ease-in-out",
             p: "4px 6px",
             backgroundColor: "",
             color: "blue",
